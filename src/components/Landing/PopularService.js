@@ -49,6 +49,7 @@ const PopularService = () => {
         axis="horizontal"
         showStatus={false}
         showIndicators={false}
+        showThumbs={false}
         renderArrowPrev={(clickHandler, hasPrev) => {
           return (
             <div

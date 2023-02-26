@@ -161,6 +161,7 @@ const TopRate = () => {
       <CustomCarousel
         showArrows={false}
         showStatus={false}
+        showThumbs={false}
         component={FreelancerCard}
         items={freelancers}
         containerClass={styles.container}
