@@ -1,0 +1,541 @@
+@import "constants/variables.scss";
+$grey: #959595;
+
+.wrapper {
+    .findFree {
+        background-color: $yellow;
+        position: relative;
+        padding: 8% 12%;
+        color: $blue-dark;
+        .title {
+            font-size: 70px;
+            font-weight: bold;
+            line-height: 75px;
+            position: relative;
+            color: $black-light;
+            .curve {
+                position: absolute;
+                bottom: -17%;
+                right: 48%;
+            }
+        }
+        .content {
+            font-size: 24px;
+            line-height: 40px;
+            max-width: 650px;
+            margin-top: 55px;
+        }
+        .popular {
+            font-size: 18px;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            .popularItem {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .person {
+            position: absolute;
+            height: 90%;
+            bottom: 0;
+            right: 15%;
+            @media screen and (max-width: $xxl) {
+                right: 5%;
+            }
+        }
+        @media screen and (max-width: $md) {
+            padding: 80px 40px 120px 40px;
+            .title {
+                font-size: 30px;
+                line-height: 32px;
+                .curve {
+                    width: 40%;
+                    right: 35%;
+                    bottom: -30%;
+                }
+            }
+            .content {
+                margin-top: 25px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .popular {
+                font-size: 10px;
+                .icon {
+                    svg {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+            .person {
+                width: 350px;
+                height: fit-content;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .banner {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $grey-light;
+        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+        & > div {
+            &:first-child {
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+            &:not(:first-child) {
+                margin-right: 50px;
+            }
+        }
+        @media screen and (max-width: $md) {
+            padding: 12px;
+            & > div {
+                &:first-child {
+                    font-size: 10px;
+                    margin-right: 3px;
+                }
+                &:not(:first-child) {
+                    margin-right: 10px;
+                    svg {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .cardContainer {
+        .title {
+            color: $green-light;
+            font-size: 39px;
+            font-weight: bold;
+            line-height: 39px;
+            border-bottom: 3px solid $yellow-dark;
+            width: fit-content;
+            padding-bottom: 10px;
+            @media screen and (max-width: $md) {
+                font-size: 22px;
+                text-align: center;
+                margin: auto;
+            }
+        }
+        .topRate {
+            padding: 50px 120px;
+            .container {
+                display: flex;
+                margin: 50px 0;
+                & > div {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            :global(.control-dots) {
+                :global(.dot) {
+                    background-color: $green;
+                }
+            }
+            @media screen and (max-width: $md) {
+                padding: 50px 0;
+                .container {
+                    justify-content: center;
+                }
+            }
+        }
+        .popularService {
+            padding: 50px 95px;
+            .arrow {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.9;
+                cursor: pointer;
+                z-index: 20;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .right {
+                left: unset;
+                right: 0;
+            }
+            .wrapper {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                & > div {
+                    border-radius: 10px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:nth-child(odd) {
+                        border: 5px solid $green-light;
+                    }
+                    &:nth-child(even) {
+                        border: 5px solid $yellow-dark;
+                    }
+                }
+            }
+        }
+    }
+    .fingertips {
+        padding: 70px 115px;
+        background-color: $white;
+        color: $black;
+        .title {
+            font-size: 49px;
+            line-height: 49px;
+            font-weight: bold;
+        }
+        .card {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            max-width: 650px;
+            .image {
+                svg {
+                    width: 93px;
+                    height: 92px;
+                }
+            }
+            .content {
+                margin-left: 10px;
+                .title {
+                    font-size: 26px;
+                }
+                .description {
+                    font-size: 26px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .rectYellow {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .rectGreen {
+            position: absolute;
+            bottom: 20%;
+            right: 45%;
+        }
+        @media screen and (max-width: $md) {
+            padding: 57px 34px;
+            .title {
+                font-size: 25px;
+            }
+            .card {
+                .image {
+                    svg {
+                        width: 56px;
+                        height: 56px;
+                    }
+                }
+                .content {
+                    .title {
+                        font-size: 20px;
+                    }
+                    .description {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .rectYellow,
+            .rectGreen {
+                display: none;
+            }
+        }
+    }
+    .logoMaker {
+        margin-top: 140px;
+        background-color: $grey;
+        background-image: url("../../assets/landing/logoMaker.svg");
+        background-position: right center;
+        background-repeat: no-repeat;
+        padding: 70px 100px;
+        border-top: 5px solid $yellow-dark;
+        border-bottom: 5px solid $yellow-dark;
+        color: $white-dark;
+        .title {
+            font-size: 53px;
+            font-weight: bold;
+            line-height: 53px;
+        }
+        .description {
+            font-size: 28px;
+            line-height: 42px;
+            margin: 45px 0;
+            max-width: 375px;
+        }
+        .button {
+            font-size: 22px;
+        }
+        @media screen and (max-width: $md) {
+            margin-top: 58px;
+            padding: 36px 63px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-image: unset;
+            .title {
+                font-size: 40px;
+            }
+            .description {
+                margin: 33px 0;
+                text-align: center;
+            }
+            .logoMakerMobile {
+                background-image: url("../../assets/landing/logoMaker.svg");
+                background-size: cover;
+                background-position: right center;
+                background-repeat: no-repeat;
+                height: 300px;
+                width: 100%;
+            }
+        }
+    }
+    .getBestJob {
+        padding: 140px 90px;
+        display: flex;
+        background-color: $grey-light;
+        .contentLeft {
+            .container {
+                position: relative;
+                .image {
+                    height: 100%;
+                }
+                .card {
+                    position: absolute;
+                    top: 5%;
+                    right: -22%;
+                    padding: 37px 23px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 8px;
+                    filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
+                    background-color: $white-dark;
+                    max-width: 270px;
+                    .title {
+                        color: $black-dark;
+                        font-size: 24px;
+                        line-height: 24px;
+                        margin-bottom: 28px;
+                    }
+                    .highlight {
+                        margin-top: 23px;
+                        font-size: 21px;
+                        line-height: 21px;
+                        color: $green-light;
+                    }
+                    @media screen and (max-width: $xl) {
+                        top: unset;
+                        bottom: -10%;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        max-height: 175px;
+                    }
+                }
+                @media screen and (max-width: $xl) {
+                    text-align: center;
+                    .image {
+                        width: 70%;
+                    }
+                }
+                @media screen and (max-width: $md) {
+                    .image {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .contentRight {
+            margin-left: 20%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .title {
+                color: $green-light;
+                font-size: 33px;
+                line-height: 45px;
+            }
+            .description {
+                margin-top: 50px;
+                color: $grey;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            .checkList {
+                margin-top: 80px;
+                color: $black-dark;
+                font-size: 21px;
+                line-height: 35px;
+            }
+        }
+        @media screen and (max-width: $xl) {
+            flex-direction: column;
+            .contentRight {
+                margin-left: 0;
+                margin-top: 150px;
+                .description {
+                    padding: 0 20px;
+                }
+            }
+        }
+        @media screen and (max-width: $md) {
+            padding: 67px 40px;
+        }
+    }
+    .category {
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .title {
+            color: $green-light;
+            font-size: 45px;
+        }
+        .subTitle {
+            margin-top: 22px;
+            color: $grey;
+            font-size: 20px;
+            line-height: 20px;
+            max-width: 680px;
+        }
+        .content {
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width: $md) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    }
+    .feedback {
+        padding: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $grey-light;
+        .cardContainer {
+            display: flex;
+        }
+        .content {
+            .title {
+                color: $green;
+                font-size: 30px;
+            }
+            .description {
+                margin-top: 40px;
+                color: $grey;
+                font-size: 16px;
+                line-height: 28px;
+            }
+            .like {
+                margin-top: 120px;
+                width: fit-content;
+                .subTitle {
+                    color: $black;
+                    font-size: 24px;
+                }
+                .imgContainer {
+                    margin-top: 20px;
+                    .image {
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        margin-left: -40px;
+                        &:last-child {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .arrows {
+                    margin-top: 50px;
+                    text-align: center;
+                }
+            }
+        }
+        @media screen and (max-width: $md) {
+            padding: 50px;
+            .cardContainer {
+                display: none;
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .description {
+                    text-align: center;
+                }
+                .like {
+                    margin-top: 0;
+                    .imgContainer {
+                        display: flex;
+                        .image {
+                            margin-left: -50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .business {
+        background-color: $white;
+        padding: 130px 0 30px 0;
+        .container {
+            background-image: url("../../assets/landing/working-from-home.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 75px 113px;
+            height: 678px;
+            .title {
+                font-size: 57px;
+                font-weight: bold;
+                line-height: 82px;
+                color: $green;
+                .highlight {
+                    font-style: italic;
+                    font-weight: 400;
+                }
+            }
+        }
+        @media screen and (max-width: $md) {
+            padding: 0;
+            .container {
+                background-image: url("../../assets/landing/working-from-home-mobile.png");
+                padding: 30px 45px;
+                background-position: top;
+                height: unset;
+                .title {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

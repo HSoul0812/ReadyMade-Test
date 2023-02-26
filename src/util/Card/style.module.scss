@@ -1,0 +1,161 @@
+@import "constants/variables.scss";
+$yellow: #fed821;
+
+.freelancer {
+	padding-top: 80px;
+	position: relative;
+	width: 100%;
+	max-width: 376px;
+	margin: 0 1%;
+	.avatar {
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			max-width: 160px;
+			border-radius: 50%;
+			border: 3px solid $yellow-dark;
+		}
+	}
+	.card {
+		padding-top: 100px;
+		border: 3px solid $yellow-dark;
+		border-radius: 10px;
+		.bio {
+			margin: 15px;
+			border: 1px solid $yellow;
+			display: flex;
+			border-radius: 50px;
+			.left {
+				margin: 5px 28px;
+				background-color: transparent;
+				width: 60%;
+				color: $blue-dark;
+				.level {
+					font-size: 16px;
+				}
+				.name {
+					font-size: 22px;
+					font-weight: bold;
+					line-height: 30px;
+				}
+			}
+			.right {
+				background-color: $green-light;
+				outline: 1px solid $green-light;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				width: 40%;
+				text-align: center;
+				color: $white;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				.text {
+					font-size: 16px;
+				}
+				.rate {
+					font-size: 17px;
+					font-weight: bold;
+				}
+			}
+		}
+		.role {
+			background-color: $yellow;
+			padding: 4px 12px;
+			font-size: 16px;
+			line-height: 25px;
+			text-decoration: underline;
+		}
+		.skills {
+			padding: 20px 14px;
+			display: flex;
+			flex-flow: row wrap;
+			font-size: 13px;
+			& > div {
+				margin-right: 14px;
+				color: $grey-dark;
+			}
+		}
+	}
+}
+.service {
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 21px 18px;
+	width: 311px;
+	height: 376px;
+	color: $white;
+	line-height: 30px;
+	margin: 0 20px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	.title {
+		font-size: 16px;
+	}
+	.highlight {
+		font-size: 28px;
+		font-weight: bold;
+	}
+}
+.category {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid $green;
+	border-radius: 8px;
+	padding: 32px 0;
+	position: relative;
+	margin: 23px;
+	box-shadow: 0px 2px 24px rgb(0 0 0 / 20%);
+
+	.title {
+		margin-top: 35px;
+		color: $black-dark;
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.description {
+		margin-top: 20px;
+		color: $grey;
+		max-width: 340px;
+		height: 110px;
+	}
+	.highlight {
+		color: $green;
+		font-size: 17px;
+		line-height: 17px;
+	}
+}
+.customer {
+	padding: 36px 30px;
+	width: 100%;
+	max-width: 400px;
+	border-radius: 8px;
+	margin: 0 25px;
+	filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
+	background-color: $white-dark;
+	.bio {
+		color: $grey;
+		font-size: 16px;
+		line-height: 26px;
+		height: 250px;
+	}
+	.avatar {
+		border-radius: 50%;
+		width: 76px;
+		height: 76px;
+	}
+	.name {
+		margin-left: 14px;
+		font-size: 24px;
+		color: $black-dark;
+	}
+	@media screen and (max-width: $md) {
+		margin: 25px 0;
+	}
+}

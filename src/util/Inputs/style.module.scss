@@ -1,0 +1,32 @@
+@import "constants/variables.scss";
+
+.group {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+    :global(.form-control) {
+        height: 77px;
+        font-size: 18px;
+        color: $black-light;
+        @media screen and (max-width: $md) {
+            height: 29px;
+            font-size: 12px;
+        }
+    }
+    .searchBtn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: 18px;
+        padding: 16px 17px;
+        transform: translate(-10%, -50%);
+    }
+    @media screen and (max-width: $md) {
+        max-width: 260px;
+        .searchBtn {
+            padding: 4px;
+            font-size: 10px;
+            transform: translate(-5%, -50%);
+        }
+    }
+}

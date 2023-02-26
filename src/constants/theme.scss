@@ -1,0 +1,58 @@
+@import "variables";
+$primary: $green;
+$theme-colors: (
+    "primary": $green,
+    "secondary": $blue-dark,
+);
+$btn-border-radius: 6px;
+$btn-padding: 16px;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: $blue-dark;
+}
+
+h1 {
+    font-size: 28pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+h3 {
+    font-size: 18pt;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+// Primary button (for important actions)
+.btn-primary,
+.btn-outline-primary {
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    border-color: $green-light !important;
+    background-color: $green-light !important;
+    color: $white !important;
+    &:hover:not(.disabled):not(:disabled) {
+        background-color: $green;
+    }
+    &.disabled,
+    &:disabled {
+        pointer-events: none;
+    }
+}
+
+// Secondary button Dark (for less common actions, against light background)
+.btn-secondary {
+    font-size: 18px;
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    &:hover:not(.disabled):not(:disabled) {
+        background-color: $grey;
+        border-color: $grey;
+    }
+}
