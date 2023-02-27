@@ -16,8 +16,10 @@ import { ReactComponent as Paypal } from 'assets/landing/paypal.svg'
 import PersonImg from 'assets/landing/person.png'
 
 import styles from './style.module.scss'
+import useIsMobile from 'util/Hooks/isMobile'
 
 const FindFreelancers = () => {
+  const { isMobile } = useIsMobile()
   const [searchVal, setSearchVal] = useState()
 
   const popularList = [
@@ -40,7 +42,7 @@ const FindFreelancers = () => {
   return (
     <>
       <div className={styles.findFree}>
-        <div className="w-50">
+        <div className={styles.leftSide}>
           <div className={styles.title}>
             The freelancer <br /> your needs.
             <CurveIcon className={styles.curve} />
@@ -54,8 +56,9 @@ const FindFreelancers = () => {
             value={searchVal}
             className="my-3"
           />
+          {isMobile && <p>Popular: </p>}
           <div className={styles.popular}>
-            <span>Popular: </span>
+            {!isMobile && <span>Popular: </span>}
             {popularList.map((item) => (
               <div key={item.text} className="d-flex align-items-center ms-3">
                 <div className={styles.icon}>{item.icon}</div>

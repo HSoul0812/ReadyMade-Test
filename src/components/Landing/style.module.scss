@@ -7,32 +7,35 @@ $grey: #959595;
         position: relative;
         padding: 8% 12%;
         color: $blue-dark;
-        .title {
-            font-size: 70px;
-            font-weight: bold;
-            line-height: 75px;
-            position: relative;
-            color: $black-light;
-            .curve {
-                position: absolute;
-                bottom: -17%;
-                right: 48%;
+        .leftSide {
+            width: 50%;
+            .title {
+                font-size: 70px;
+                font-weight: bold;
+                line-height: 75px;
+                position: relative;
+                color: $black-light;
+                .curve {
+                    position: absolute;
+                    bottom: -17%;
+                    right: 48%;
+                }
             }
-        }
-        .content {
-            font-size: 24px;
-            line-height: 40px;
-            max-width: 650px;
-            margin-top: 55px;
-        }
-        .popular {
-            font-size: 18px;
-            line-height: 18px;
-            display: flex;
-            align-items: center;
-            .popularItem {
+            .content {
+                font-size: 24px;
+                line-height: 40px;
+                max-width: 650px;
+                margin-top: 55px;
+            }
+            .popular {
+                font-size: 18px;
+                line-height: 18px;
                 display: flex;
                 align-items: center;
+                .popularItem {
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
         .person {
@@ -46,34 +49,50 @@ $grey: #959595;
         }
         @media screen and (max-width: $md) {
             padding: 80px 40px 120px 40px;
-            .title {
-                font-size: 30px;
-                line-height: 32px;
-                .curve {
-                    width: 40%;
-                    right: 35%;
-                    bottom: -30%;
-                }
-            }
-            .content {
-                margin-top: 25px;
-                font-size: 14px;
-                line-height: 18px;
-            }
-            .popular {
-                font-size: 10px;
-                .icon {
-                    svg {
-                        width: 12px;
-                        height: 12px;
+            .leftSide {
+                .title {
+                    font-size: 30px;
+                    line-height: 32px;
+                    .curve {
+                        width: 40%;
+                        right: 35%;
+                        bottom: -30%;
                     }
                 }
+                .content {
+                    margin-top: 25px;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                .popular {
+                    font-size: 10px;
+                    .icon {
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+                .person {
+                    width: 350px;
+                    height: fit-content;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
-            .person {
-                width: 350px;
-                height: fit-content;
-                left: 50%;
-                transform: translateX(-50%);
+            @media screen and (max-width: $sm) {
+                padding: 20px 20px 0 20px;
+                .leftSide {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
+                }
+                .person {
+                    position: static;
+                    width: 100%;
+                }
             }
         }
     }
@@ -192,6 +211,9 @@ $grey: #959595;
                         border: 5px solid $yellow-dark;
                     }
                 }
+            }
+            @media screen and (max-width: $md) {
+                padding: 20px;
             }
         }
     }
