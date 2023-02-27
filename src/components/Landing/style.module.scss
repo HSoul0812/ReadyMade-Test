@@ -47,8 +47,22 @@ $grey: #959595;
                 right: 5%;
             }
         }
+        @media screen and (max-width: $lg) {
+            padding: 8% 12% 0 12%;
+            .leftSide {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .person {
+                position: static;
+                width: 100%;
+            }
+        }
         @media screen and (max-width: $md) {
-            padding: 80px 40px 120px 40px;
+            padding: 80px 40px 0 40px;
             .leftSide {
                 .title {
                     font-size: 30px;
@@ -82,17 +96,6 @@ $grey: #959595;
             }
             @media screen and (max-width: $sm) {
                 padding: 20px 20px 0 20px;
-                .leftSide {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    width: 100%;
-                    text-align: center;
-                }
-                .person {
-                    position: static;
-                    width: 100%;
-                }
             }
         }
     }
