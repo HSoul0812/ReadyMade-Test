@@ -549,7 +549,9 @@ $grey: #959595;
                         &:first-child {
                             margin-left: 0;
                         }
-                        margin-left: -40px;
+                        margin-left: -20px;
+                        width: 85px;
+                        height: 85px;
                         &:last-child {
                             cursor: pointer;
                         }
