@@ -8,7 +8,6 @@ $grey: #959595;
         padding: 8% 12%;
         color: $blue-dark;
         .leftSide {
-            width: 50%;
             .title {
                 font-size: 70px;
                 font-weight: bold;
@@ -18,7 +17,7 @@ $grey: #959595;
                 .curve {
                     position: absolute;
                     bottom: -17%;
-                    right: 48%;
+                    left: 15%;
                 }
             }
             .content {
@@ -42,24 +41,8 @@ $grey: #959595;
             position: absolute;
             height: 90%;
             bottom: 0;
-            right: 15%;
-            @media screen and (max-width: $xxl) {
-                right: 5%;
-            }
-        }
-        @media screen and (max-width: $lg) {
-            padding: 8% 12% 0 12%;
-            .leftSide {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-            }
-            .person {
-                position: static;
-                width: 100%;
-            }
+            left: 57%;
+            transform: translateX(-50%);
         }
         @media screen and (max-width: $md) {
             padding: 80px 40px 0 40px;
@@ -110,10 +93,10 @@ $grey: #959595;
             &:first-child {
                 font-size: 18px;
                 font-weight: bold;
-                margin-right: 10px;
+                margin-right: 16px;
             }
             &:not(:first-child) {
-                margin-right: 50px;
+                margin-right: 60px;
             }
         }
         @media screen and (max-width: $md) {
@@ -150,8 +133,9 @@ $grey: #959595;
         .topRate {
             padding: 50px 120px;
             .container {
+                width: 100%;
                 display: flex;
-                margin: 50px 0;
+                margin: 50px 0 70px 0;
                 & > div {
                     &:first-child {
                         margin-left: 0;
@@ -165,6 +149,8 @@ $grey: #959595;
             :global(.control-dots) {
                 :global(.dot) {
                     background-color: $green;
+                    width: 15px;
+                    height: 15px;
                 }
             }
             @media screen and (max-width: $md) {
@@ -175,45 +161,23 @@ $grey: #959595;
             }
         }
         .popularService {
-            padding: 50px 95px;
-            .arrow {
-                top: 0;
-                bottom: 0;
-                left: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0.9;
-                cursor: pointer;
-                z-index: 20;
-                &:hover {
-                    opacity: 1;
-                }
-            }
-            .right {
-                left: unset;
-                right: 0;
-            }
+            padding: 0 120px 160px 120px;
             .wrapper {
                 margin-top: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                & > div {
-                    border-radius: 10px;
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    &:nth-child(odd) {
-                        border: 5px solid $green-light;
-                    }
-                    &:nth-child(even) {
-                        border: 5px solid $yellow-dark;
-                    }
+                width: 100%;
+                :global(.react-multiple-carousel__arrow--left) {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    left: 0;
                 }
+                :global(.react-multiple-carousel__arrow--right) {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    right: 0;
+                }
+            }
+            @media screen and (max-width: $xxl) {
+                padding-bottom: 110px;
             }
             @media screen and (max-width: $md) {
                 padding: 20px;
@@ -226,65 +190,86 @@ $grey: #959595;
         color: $black;
         .title {
             font-size: 49px;
-            line-height: 49px;
+            line-height: 67px;
             font-weight: bold;
         }
-        .card {
-            margin-top: 50px;
+        .container {
             display: flex;
             align-items: center;
-            max-width: 650px;
-            .image {
-                svg {
-                    width: 93px;
-                    height: 92px;
+            justify-content: space-between;
+            .leftSide {
+                width: 50%;
+                .card {
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    .image {
+                        svg {
+                            width: 93px;
+                            height: 92px;
+                        }
+                    }
+                    .content {
+                        margin-left: 10px;
+                        .title {
+                            font-size: 26px;
+                            line-height: 40px;
+                        }
+                        .description {
+                            font-size: 26px;
+                            line-height: 40px;
+                        }
+                    }
                 }
             }
-            .content {
-                margin-left: 10px;
-                .title {
-                    font-size: 26px;
+            .rightSide {
+                position: relative;
+                width: 45%;
+                img {
+                    width: 100%;
+                    z-index: 2;
                 }
-                .description {
-                    font-size: 26px;
-                    line-height: 40px;
+                .rectYellow {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+                .rectGreen {
+                    position: absolute;
+                    bottom: 20%;
+                    left: 60%;
                 }
             }
         }
-        .rectYellow {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .rectGreen {
-            position: absolute;
-            bottom: 20%;
-            right: 45%;
-        }
-        @media screen and (max-width: $md) {
+        @media screen and (max-width: $lg) {
             padding: 57px 34px;
             .title {
                 font-size: 25px;
             }
-            .card {
-                .image {
-                    svg {
-                        width: 56px;
-                        height: 56px;
+            .container {
+                .leftSide {
+                    .card {
+                        width: 100%;
+                        .image {
+                            svg {
+                                width: 56px;
+                                height: 56px;
+                            }
+                        }
+                        .content {
+                            .title {
+                                font-size: 20px;
+                            }
+                            .description {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
-                .content {
-                    .title {
-                        font-size: 20px;
-                    }
-                    .description {
-                        font-size: 16px;
-                    }
+                .rectYellow,
+                .rectGreen {
+                    display: none;
                 }
-            }
-            .rectYellow,
-            .rectGreen {
-                display: none;
             }
         }
     }
@@ -454,6 +439,7 @@ $grey: #959595;
             justify-content: center;
         }
         @media screen and (max-width: $md) {
+            padding: 20px;
             .content {
                 flex-direction: column;
             }

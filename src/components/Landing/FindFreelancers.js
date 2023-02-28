@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import cn from 'classnames'
 import { ArrowUpRight } from 'react-bootstrap-icons'
-import SearchInput from 'util/Inputs/SearchInput'
 import Banner from 'util/Banner'
+import SearchInput from 'util/Inputs/SearchInput'
 import { ReactComponent as MarketingIcon } from 'assets/landing/marketing.svg'
 import { ReactComponent as BusinessIcon } from 'assets/landing/business.svg'
 import { ReactComponent as DollarIcon } from 'assets/landing/dollar.svg'
@@ -54,7 +53,7 @@ const FindFreelancers = () => {
             placeholder="Search item name or keywords"
             onChange={handleInputChange}
             value={searchVal}
-            className="my-3"
+            className="my-4"
           />
           {isMobile && <p>Popular: </p>}
           <div className={styles.popular}>
@@ -62,7 +61,7 @@ const FindFreelancers = () => {
             {popularList.map((item) => (
               <div key={item.text} className="d-flex align-items-center ms-3">
                 <div className={styles.icon}>{item.icon}</div>
-                <div className="mx-1">{item.text} </div>
+                <div className="mx-2">{item.text} </div>
                 <ArrowUpRight color="grey" size={15} />
               </div>
             ))}

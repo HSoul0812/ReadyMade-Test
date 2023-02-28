@@ -36,6 +36,7 @@
         :global(.navbar-collapse) {
             justify-content: flex-end;
             :global(.navbar-nav) {
+                align-items: center;
                 :global(.nonAuthButton) {
                     & > a {
                         color: $black;

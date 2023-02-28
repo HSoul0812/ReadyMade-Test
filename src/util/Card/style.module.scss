@@ -6,7 +6,7 @@ $yellow: #fed821;
 	position: relative;
 	width: 100%;
 	max-width: 376px;
-	margin: 0 1%;
+	margin: 0 1.75%;
 	.avatar {
 		text-align: center;
 		position: absolute;
@@ -23,6 +23,7 @@ $yellow: #fed821;
 		padding-top: 100px;
 		border: 3px solid $yellow-dark;
 		border-radius: 10px;
+		height: 100%;
 		.bio {
 			margin: 15px;
 			border: 1px solid $yellow;
@@ -68,6 +69,7 @@ $yellow: #fed821;
 			font-size: 16px;
 			line-height: 25px;
 			text-decoration: underline;
+			text-align: center;
 		}
 		.skills {
 			padding: 20px 14px;
@@ -84,12 +86,12 @@ $yellow: #fed821;
 .service {
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: contain;
 	padding: 21px 18px;
 	width: 311px;
 	height: 376px;
 	color: $white;
 	line-height: 30px;
-	margin: 0 20px;
 	display: flex;
 	align-items: flex-start;
 	flex-direction: column;
@@ -99,6 +101,16 @@ $yellow: #fed821;
 	.highlight {
 		font-size: 28px;
 		font-weight: bold;
+	}
+	@media screen and (max-width: $xxl) {
+		width: 229px;
+		height: 275px;
+		.title {
+			font-size: 14px;
+		}
+		.highlight {
+			font-size: 20px;
+		}
 	}
 }
 .category {

@@ -8,9 +8,14 @@
         height: 77px;
         font-size: 18px;
         color: $black-light;
+        border: 1px solid $black-light;
+        &::placeholder {
+            opacity: 0.3;
+        }
         @media screen and (max-width: $md) {
             height: 29px;
             font-size: 12px;
+            border: unset;
         }
     }
     .searchBtn {
