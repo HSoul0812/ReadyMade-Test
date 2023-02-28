@@ -3,8 +3,8 @@ import FooterDesktop from './Desktop'
 import FooterMobile from './Mobile'
 
 const Footer = () => {
-  const { isMobile } = useIsMobile()
-  return isMobile ? <FooterMobile /> : <FooterDesktop />
+  const { isTablet } = useIsMobile()
+  return isTablet ? <FooterMobile /> : <FooterDesktop />
 }
 
 export default Footer
