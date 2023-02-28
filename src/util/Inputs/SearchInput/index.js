@@ -30,7 +30,7 @@ const SearchInput = ({
         variant="primary"
       />
       <Button className={styles.searchBtn}>
-        Search <Search color="white" />{' '}
+        Search <Search color="white" className="ms-2" />{' '}
       </Button>
     </Form.Group>
   )

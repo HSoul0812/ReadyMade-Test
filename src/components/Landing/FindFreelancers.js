@@ -43,7 +43,7 @@ const FindFreelancers = () => {
       <div className={styles.findFree}>
         <div className={styles.leftSide}>
           <div className={styles.title}>
-            The freelancer <br /> your needs.
+            THE FREELANCER TO <br /> YOUR NEEDS.
             <CurveIcon className={styles.curve} />
           </div>
           <div className={styles.content}>
@@ -55,7 +55,6 @@ const FindFreelancers = () => {
             value={searchVal}
             className="my-4"
           />
-          {isMobile && <p>Popular: </p>}
           <div className={styles.popular}>
             {!isMobile && <span>Popular: </span>}
             {popularList.map((item) => (

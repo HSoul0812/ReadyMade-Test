@@ -51,34 +51,28 @@ $grey: #959595;
                     font-size: 30px;
                     line-height: 32px;
                     .curve {
-                        width: 40%;
                         right: 35%;
                         bottom: -30%;
                     }
                 }
                 .content {
+                    max-width: 115px;
                     margin-top: 25px;
                     font-size: 14px;
                     line-height: 18px;
                 }
                 .popular {
-                    font-size: 10px;
-                    .icon {
-                        svg {
-                            width: 12px;
-                            height: 12px;
-                        }
-                    }
-                }
-                .person {
-                    width: 350px;
-                    height: fit-content;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    display: none;
                 }
             }
+            .person {
+                width: 230px;
+                height: fit-content;
+                left: 65%;
+                transform: translateX(-50%);
+            }
             @media screen and (max-width: $sm) {
-                padding: 20px 20px 0 20px;
+                padding: 20px 20px 80px 20px;
             }
         }
     }
