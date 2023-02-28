@@ -1,6 +1,4 @@
-import cn from 'classnames'
 import Carousel from 'react-multi-carousel'
-import CustomCarousel from 'util/Carousel'
 import ServiceCard from 'util/Card/Service'
 import Image1 from 'assets/landing/service1.png'
 import Image2 from 'assets/landing/service2.png'

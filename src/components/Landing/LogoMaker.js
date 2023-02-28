@@ -1,4 +1,4 @@
-import { Button, Image } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 import useIsMobile from 'util/Hooks/isMobile'
 import styles from './style.module.scss'

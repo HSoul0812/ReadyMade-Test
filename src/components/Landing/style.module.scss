@@ -185,7 +185,7 @@ $grey: #959595;
         }
     }
     .fingertips {
-        padding: 70px 115px;
+        padding: 70px 70px 70px 115px;
         background-color: $white;
         color: $black;
         .title {
@@ -225,31 +225,39 @@ $grey: #959595;
             .rightSide {
                 position: relative;
                 width: 45%;
+                margin-left: 5%;
                 img {
                     width: 100%;
+                    position: relative;
                     z-index: 2;
                 }
                 .rectYellow {
                     position: absolute;
-                    top: 0;
-                    right: 0;
+                    top: -20px;
+                    right: -20px;
                 }
                 .rectGreen {
                     position: absolute;
-                    bottom: 20%;
-                    left: 60%;
+                    bottom: -20px;
+                    left: 20px;
                 }
             }
         }
-        @media screen and (max-width: $lg) {
-            padding: 57px 34px;
+        @media screen and (max-width: $md) {
+            padding: 57px;
             .title {
                 font-size: 25px;
+                line-height: 39px;
             }
             .container {
+                margin-top: 20px;
+                flex-direction: column-reverse;
                 .leftSide {
+                    width: 100%;
+                    margin-top: 25px;
                     .card {
                         width: 100%;
+                        margin-top: 25px;
                         .image {
                             svg {
                                 width: 56px;
@@ -262,13 +270,13 @@ $grey: #959595;
                             }
                             .description {
                                 font-size: 16px;
+                                line-height: 26px;
                             }
                         }
                     }
                 }
-                .rectYellow,
-                .rectGreen {
-                    display: none;
+                .rightSide {
+                    width: 100%;
                 }
             }
         }
@@ -312,7 +320,7 @@ $grey: #959595;
                 text-align: center;
             }
             .logoMakerMobile {
-                background-image: url("../../assets/landing/logoMaker.svg");
+                background-image: url("../../assets/landing/logoMaker-mobile.svg");
                 background-size: cover;
                 background-position: right center;
                 background-repeat: no-repeat;
@@ -330,6 +338,9 @@ $grey: #959595;
                 position: relative;
                 .image {
                     height: 100%;
+                    border: 5px solid $yellow-dark;
+                    border-top-right-radius: 100px;
+                    border-bottom-left-radius: 100px;
                 }
                 .card {
                     position: absolute;
@@ -413,6 +424,14 @@ $grey: #959595;
         }
         @media screen and (max-width: $md) {
             padding: 67px 40px;
+            .contentRight {
+                .description {
+                    margin-top: 30px;
+                }
+                .checkList {
+                    margin-top: 40px;
+                }
+            }
         }
     }
     .category {
@@ -440,6 +459,9 @@ $grey: #959595;
         }
         @media screen and (max-width: $md) {
             padding: 20px;
+            .content {
+                margin-top: 30px;
+            }
             .content {
                 flex-direction: column;
             }
