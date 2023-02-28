@@ -2,14 +2,14 @@
 
 .navbar {
     margin: 26px 150px;
-    @media screen and (max-width: $sm) {
-        margin: 20px 30px;
+    @media screen and (max-width: $md) {
+        margin: 10px 20px;
     }
     .readyVladeLogo {
         height: 94px;
         width: 265px;
-        @media screen and (max-width: $sm) {
-            height: 50px;
+        @media screen and (max-width: $md) {
+            height: 45px;
             width: 141px;
         }
     }

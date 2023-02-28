@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import CategoryCard from 'util/Card/Category'
 import { ReactComponent as DigitalIcon } from 'assets/landing/digital.svg'
 import { ReactComponent as DesignIcon } from 'assets/landing/design.svg'
@@ -40,11 +39,9 @@ const Category = () => {
         Aliquam sed molestie sem, eget congue erat. Orci varius natoque
         penatibus et magnis.
       </div>
-      <div className={cn(styles.content, 'row')}>
+      <div className={styles.content}>
         {categoryList.map((item, idx) => (
-          <div className="col" key={idx}>
-            <CategoryCard data={item} />
-          </div>
+          <CategoryCard key={idx} data={item} />
         ))}
       </div>
     </div>

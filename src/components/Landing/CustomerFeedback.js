@@ -1,4 +1,5 @@
 import { Image } from 'react-bootstrap'
+import cn from 'classnames'
 import AddIcon from 'assets/landing/add.svg'
 import Person1 from 'assets/landing/person1.svg'
 import Person2 from 'assets/landing/person2.svg'
@@ -26,7 +27,12 @@ const CustomerFeedback = () => {
   ]
   return (
     <div className={styles.feedback}>
-      <div className={styles.cardContainer}>
+      <div
+        className={cn(
+          styles.cardContainer,
+          'col-lg-4 d-flex align-items-stretch',
+        )}
+      >
         {feedback.map((item, idx) => (
           <CustomerCard data={item} key={idx} />
         ))}

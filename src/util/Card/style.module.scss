@@ -115,12 +115,13 @@ $yellow: #fed821;
 }
 .category {
 	width: 100%;
+	max-width: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid $green;
 	border-radius: 8px;
-	padding: 32px 0;
+	padding: 32px 10px;
 	position: relative;
 	margin: 23px;
 	box-shadow: 0px 2px 24px rgb(0 0 0 / 20%);
@@ -146,7 +147,8 @@ $yellow: #fed821;
 .customer {
 	padding: 36px 30px;
 	width: 100%;
-	max-width: 400px;
+	max-width: 328px;
+	width: 100%;
 	border-radius: 8px;
 	margin: 0 25px;
 	filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
@@ -154,8 +156,8 @@ $yellow: #fed821;
 	.bio {
 		color: $grey;
 		font-size: 16px;
-		line-height: 26px;
-		height: 250px;
+		line-height: 24px;
+		height: 190px;
 	}
 	.avatar {
 		border-radius: 50%;

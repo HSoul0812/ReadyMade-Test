@@ -9,13 +9,14 @@
         font-size: 18px;
         color: $black-light;
         border: 1px solid $black-light;
-        &::placeholder {
-            opacity: 0.3;
-        }
-        @media screen and (max-width: $md) {
+        padding-left: 33px;
+        @media screen and (max-width: $xxl) {
             height: 37px;
             font-size: 12px;
             border: unset;
+        }
+        @media screen and (max-width: $md) {
+            padding-left: 12px;
         }
     }
     .searchBtn {
@@ -26,7 +27,7 @@
         padding: 16px 17px;
         transform: translate(-10%, -50%);
     }
-    @media screen and (max-width: $md) {
+    @media screen and (max-width: $xxl) {
         max-width: 330px;
         // width: 100%;
         .searchBtn {
@@ -34,7 +35,7 @@
             font-size: 8px;
             transform: translate(-5%, -50%);
         }
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: $md) {
             max-width: unset;
             width: 100%;
         }

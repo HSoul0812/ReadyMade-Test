@@ -18,7 +18,6 @@ import styles from './style.module.scss'
 import useIsMobile from 'util/Hooks/isMobile'
 
 const FindFreelancers = () => {
-  const { isMobile } = useIsMobile()
   const [searchVal, setSearchVal] = useState()
 
   const popularList = [
@@ -53,15 +52,15 @@ const FindFreelancers = () => {
             placeholder="Search item name or keywords"
             onChange={handleInputChange}
             value={searchVal}
-            className="my-4"
+            className="mt-4 mb-2"
           />
           <div className={styles.popular}>
             <span>Popular: </span>
             {popularList.map((item) => (
-              <div key={item.text} className="d-flex align-items-center ms-3">
+              <div key={item.text} className="d-flex align-items-center ms-2">
                 <div className={styles.icon}>{item.icon}</div>
-                <div className="mx-2">{item.text} </div>
-                <ArrowUpRight color="grey" size={15} />
+                <div className="mx-1">{item.text} </div>
+                <ArrowUpRight color="grey" size={10} />
               </div>
             ))}
           </div>
