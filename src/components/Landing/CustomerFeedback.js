@@ -27,12 +27,7 @@ const CustomerFeedback = () => {
   ]
   return (
     <div className={styles.feedback}>
-      <div
-        className={cn(
-          styles.cardContainer,
-          'col-lg-4 d-flex align-items-stretch',
-        )}
-      >
+      <div className={cn(styles.cardContainer, 'd-flex align-items-stretch')}>
         {feedback.map((item, idx) => (
           <CustomerCard data={item} key={idx} />
         ))}
