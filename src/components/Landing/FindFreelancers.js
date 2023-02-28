@@ -56,7 +56,7 @@ const FindFreelancers = () => {
             className="my-4"
           />
           <div className={styles.popular}>
-            {!isMobile && <span>Popular: </span>}
+            <span>Popular: </span>
             {popularList.map((item) => (
               <div key={item.text} className="d-flex align-items-center ms-3">
                 <div className={styles.icon}>{item.icon}</div>

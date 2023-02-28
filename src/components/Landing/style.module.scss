@@ -23,7 +23,7 @@ $grey: #959595;
             .content {
                 font-size: 24px;
                 line-height: 40px;
-                max-width: 650px;
+                width: 60%;
                 margin-top: 55px;
             }
             .popular {
@@ -45,7 +45,7 @@ $grey: #959595;
             transform: translateX(-50%);
         }
         @media screen and (max-width: $md) {
-            padding: 80px 40px 0 40px;
+            padding: 80px 40px 80px 40px;
             .leftSide {
                 .title {
                     font-size: 30px;
@@ -56,13 +56,18 @@ $grey: #959595;
                     }
                 }
                 .content {
-                    max-width: 115px;
                     margin-top: 25px;
                     font-size: 14px;
                     line-height: 18px;
                 }
                 .popular {
-                    display: none;
+                    font-size: 10px;
+                    .icon {
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
                 }
             }
             .person {
@@ -73,6 +78,14 @@ $grey: #959595;
             }
             @media screen and (max-width: $sm) {
                 padding: 20px 20px 80px 20px;
+                .leftSide {
+                    .container {
+                        max-width: 115px;
+                    }
+                    .popular {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -299,9 +312,19 @@ $grey: #959595;
         .button {
             font-size: 22px;
         }
+        @media screen and (max-width: $xxl) {
+            .title {
+                font-size: 39px;
+                line-height: 39px;
+            }
+            .description {
+                font-size: 22px;
+                line-height: 35px;
+            }
+        }
         @media screen and (max-width: $md) {
             margin-top: 58px;
-            padding: 36px 63px;
+            padding: 36px 0;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -314,12 +337,10 @@ $grey: #959595;
                 text-align: center;
             }
             .logoMakerMobile {
-                background-image: url("../../assets/landing/logoMaker-mobile.svg");
-                background-size: cover;
-                background-position: right center;
-                background-repeat: no-repeat;
-                height: 300px;
                 width: 100%;
+                padding: 0 20px;
+                border-top: 3px solid $yellow-dark;
+                border-bottom: 3px solid $yellow-dark;
             }
         }
     }

@@ -27,12 +27,16 @@
         transform: translate(-10%, -50%);
     }
     @media screen and (max-width: $md) {
-        max-width: unset;
-        width: 100%;
+        max-width: 330px;
+        // width: 100%;
         .searchBtn {
             padding: 8px;
             font-size: 8px;
             transform: translate(-5%, -50%);
+        }
+        @media screen and (max-width: $sm) {
+            max-width: unset;
+            width: 100%;
         }
     }
 }
