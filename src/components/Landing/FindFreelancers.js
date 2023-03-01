@@ -52,7 +52,7 @@ const FindFreelancers = () => {
             placeholder="Search item name or keywords"
             onChange={handleInputChange}
             value={searchVal}
-            className="mt-4 mb-2"
+            className="my-4"
           />
           <div className={styles.popular}>
             <span>Popular: </span>
