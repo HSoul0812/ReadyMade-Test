@@ -584,6 +584,9 @@ $grey: #959595;
                         display: flex;
                         .image {
                             margin-left: -50px;
+                            @media screen and (max-width: $sm) {
+                                margin-left: -65px;
+                            }
                         }
                     }
                 }
