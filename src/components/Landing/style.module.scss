@@ -550,7 +550,7 @@ $grey: #959595;
                         &:first-child {
                             margin-left: 0;
                         }
-                        margin-left: -20px;
+                        margin-left: -50px;
                         width: 85px;
                         height: 85px;
                         &:last-child {
@@ -583,7 +583,6 @@ $grey: #959595;
                     .imgContainer {
                         display: flex;
                         .image {
-                            margin-left: -50px;
                             @media screen and (max-width: $sm) {
                                 margin-left: -65px;
                             }
