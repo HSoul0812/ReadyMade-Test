@@ -2,844 +2,844 @@
 $grey: #959595;
 
 .wrapper {
-    .findFree {
-        background-color: $yellow;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 6%;
-        padding-right: 2%;
-        color: $blue-dark;
-        .leftSide {
-            .title {
-                font-size: 70px;
-                font-weight: bold;
-                line-height: 75px;
-                position: relative;
-                color: $black-light;
-                .curve {
-                    position: absolute;
-                    bottom: -17%;
-                    left: 25%;
-                }
-            }
-            .content {
-                font-size: 24px;
-                line-height: 40px;
-                max-width: 560px;
-                margin-top: 55px;
-            }
-            .popular {
-                font-size: 18px;
-                line-height: 18px;
-                display: flex;
-                align-items: center;
-                .popularItem {
-                    display: flex;
-                    align-items: center;
-                }
-            }
-        }
-        .person {
-            height: 630px;
-            transform: scaleX(-1);
-            vertical-align: middle;
-        }
-        @media screen and (max-width: $xxl) {
-            .leftSide {
-                .title {
-                    font-size: 30px;
-                    line-height: 33px;
-                    .curve {
-                        width: 83px;
-                        left: 30%;
-                        bottom: -30%;
-                    }
-                }
-                .content {
-                    margin-top: 32px;
-                    font-size: 14px;
-                    line-height: 21px;
-                    max-width: 270px;
-                }
-                .popular {
-                    font-size: 10px;
-                    .icon {
-                        svg {
-                            width: 12px;
-                            height: 12px;
-                        }
-                    }
-                }
-            }
-            .person {
-                height: 366px;
-            }
-        }
-        @media screen and (max-width: $md) {
-            position: relative;
-            padding: 42px 22px 65px 22px;
-            .leftSide {
-                .content {
-                    max-width: 115px;
-                }
-                .popular {
-                    display: none;
-                }
-            }
-            .person {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                height: 263px;
-                width: 228px;
-            }
-        }
-    }
-    .banner {
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $grey-light;
-        filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
-        & > div {
-            &:first-child {
-                font-size: 18px;
-                font-weight: bold;
-                margin-right: 16px;
-            }
-            &:not(:first-child) {
-                margin-right: 60px;
-            }
-        }
-        @media screen and (max-width: $xxl) {
-            & > div {
-                &:not(:first-child) {
-                    margin-right: 40px;
-                }
-            }
-        }
-        @media screen and (max-width: $md) {
-            padding: 12px;
-            & > div {
-                &:first-child {
-                    font-size: 10px;
-                    margin-right: 3px;
-                }
-                &:not(:first-child) {
-                    margin-right: 10px;
-                    svg {
-                        width: 50px;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: $sm) {
-            padding: 5px;
-            & > div {
-                &:first-child {
-                    font-size: 10px;
-                    margin-right: 3px;
-                }
-                &:not(:first-child) {
-                    margin-right: 3px;
-                }
-            }
-        }
-    }
-    .cardContainer {
-        .title {
-            color: $green-light;
-            font-size: 39px;
-            font-weight: bold;
-            line-height: 39px;
-            border-bottom: 3px solid $yellow-dark;
-            width: fit-content;
-            padding-bottom: 10px;
-            @media screen and (max-width: $xxl) {
-                font-size: 30px;
-                line-height: 45px;
-            }
-            @media screen and (max-width: $md) {
-                font-size: 22px;
-                // text-align: center;
-                margin: auto;
-            }
-        }
-        .topRate {
-            padding: 50px 120px;
-            .container {
-                width: 100%;
-                display: flex;
-                margin: 50px 0 70px 0;
-                & > div {
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-            .arrow {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 1;
-            }
-            .right {
-                left: unset;
-                right: 0;
-            }
-            :global(.control-dots) {
-                :global(.dot) {
-                    background-color: $green;
-                    width: 15px;
-                    height: 15px;
-                }
-            }
-            @media screen and (max-width: $xxl) {
-                padding: 45px 50px;
-            }
-            @media screen and (max-width: $md) {
-                padding: 50px 20px;
-                .container {
-                    justify-content: center;
-                }
-            }
-        }
-        .popularService {
-            padding: 0 120px 160px 120px;
-            .wrapper {
-                margin-top: 40px;
-                width: 100%;
-                :global(.react-multiple-carousel__arrow--left) {
-                    transform: translateY(-50%);
-                    top: 50%;
-                    left: 0;
-                }
-                :global(.react-multiple-carousel__arrow--right) {
-                    transform: translateY(-50%);
-                    top: 50%;
-                    right: 0;
-                }
-            }
-            @media screen and (max-width: $xxl) {
-                padding: 0 60px 110px 60px;
-            }
-            @media screen and (max-width: $md) {
-                padding: 20px;
-            }
-        }
-    }
-    .fingertips {
-        padding: 70px 70px 70px 115px;
-        background-color: $white;
-        color: $black;
-        .title {
-            font-size: 49px;
-            line-height: 67px;
-            font-weight: bold;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .leftSide {
-                width: 50%;
-                .card {
-                    margin-top: 50px;
-                    display: flex;
-                    align-items: center;
-                    .image {
-                        svg {
-                            width: 93px;
-                            height: 92px;
-                        }
-                    }
-                    .content {
-                        margin-left: 10px;
-                        .title {
-                            font-size: 26px;
-                            line-height: 40px;
-                        }
-                        .description {
-                            font-size: 26px;
-                            line-height: 40px;
-                        }
-                    }
-                }
-            }
-            .rightSide {
-                position: relative;
-                width: 45%;
-                margin-left: 5%;
-                img {
-                    width: 100%;
-                    position: relative;
-                    z-index: 2;
-                }
-                .rectYellow {
-                    position: absolute;
-                    top: -20px;
-                    right: -20px;
-                }
-                .rectGreen {
-                    position: absolute;
-                    bottom: -20px;
-                    left: 20px;
-                }
-            }
-        }
-        @media screen and (max-width: $xl) {
-            padding: 57px;
-            .title {
-                font-size: 25px;
-                line-height: 39px;
-            }
-            .container {
-                margin-top: 20px;
-                flex-direction: column-reverse;
-                .leftSide {
-                    width: 100%;
-                    margin-top: 25px;
-                    .card {
-                        width: 100%;
-                        margin-top: 25px;
-                        .image {
-                            svg {
-                                width: 56px;
-                                height: 56px;
-                            }
-                        }
-                        .content {
-                            .title {
-                                font-size: 20px;
-                            }
-                            .description {
-                                font-size: 16px;
-                                line-height: 26px;
-                            }
-                        }
-                    }
-                }
-                .rightSide {
-                    width: 100%;
-                    max-width: 650px;
-                    margin-left: 0;
-                }
-            }
-        }
-        @media screen and (max-width: $md) {
-            padding: 45px 18px;
-            .title {
-                font-size: 20px;
-                line-height: 30px;
-            }
-            .container {
-                .leftSide {
-                    .card {
-                        width: 100%;
-                        margin-top: 10px;
-                        .image {
-                            svg {
-                                width: 33px;
-                                height: 33px;
-                            }
-                        }
-                        .content {
-                            .title {
-                                font-size: 12px;
-                                line-height: 25px;
-                            }
-                            .description {
-                                font-size: 9px;
-                                line-height: 15px;
-                            }
-                        }
-                    }
-                }
-                .rightSide {
-                    max-width: unset;
-                    .rectYellow {
-                        width: 35px;
-                        height: 45px;
-                        top: -10px;
-                        right: -10px;
-                    }
-                    .rectGreen {
-                        width: 35px;
-                        height: 45px;
-                        bottom: -10px;
-                        left: 10px;
-                    }
-                }
-            }
-        }
-    }
-    .logoMaker {
-        margin-top: 140px;
-        background-color: $grey;
-        background-image: url("../../assets/landing/logoMaker.svg");
-        background-position: right center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 70px 100px;
-        border-top: 5px solid $yellow-dark;
-        border-bottom: 5px solid $yellow-dark;
-        color: $white-dark;
-        .title {
-            font-size: 53px;
-            font-weight: bold;
-            line-height: 53px;
-        }
-        .description {
-            font-size: 28px;
-            line-height: 42px;
-            margin: 45px 0;
-            max-width: 375px;
-        }
-        .button {
-            font-size: 22px;
-        }
-        @media screen and (max-width: $xxl) {
-            margin-top: 60px;
-            background-image: url("../../assets/landing/logoMaker.svg");
-            .title {
-                font-size: 39px;
-                line-height: 39px;
-            }
-            .description {
-                font-size: 22px;
-                line-height: 35px;
-                margin: 20px 0;
-            }
-            .button {
-                font-size: 12px;
-            }
-        }
-        @media screen and (max-width: $xl) {
-            padding: 18px 50px;
-            .title {
-                max-width: 235px;
-                font-size: 29px;
-                line-height: 43.5px;
-            }
-            .description {
-                font-size: 16px;
-                line-height: 24px;
-                max-width: 211px;
-            }
-        }
-        @media screen and (max-width: $md) {
-            margin-top: 58px;
-            padding: 36px 0;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            background-image: unset;
-            .title {
-                max-width: unset;
-                font-size: 24px;
-                line-height: 36px;
-            }
-            .description {
-                margin: 33px 0;
-                text-align: center;
-                max-width: 290px;
-            }
-            .logoMakerMobile {
-                width: 100%;
-                padding: 0 20px;
-                border-top: 3px solid $yellow-dark;
-                border-bottom: 3px solid $yellow-dark;
-            }
-        }
-    }
-    .getBestJob {
-        padding: 140px 90px;
-        display: flex;
-        background-color: $grey-light;
-        .contentLeft {
-            .container {
-                position: relative;
-                .image {
-                    height: 100%;
-                    // border: 5px solid $yellow-dark;
-                    border-top-right-radius: 119px;
-                    border-bottom-left-radius: 119px;
-                }
-                .card {
-                    position: absolute;
-                    top: -12%;
-                    right: -22%;
-                    padding: 37px 23px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    border-radius: 8px;
-                    filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
-                    background-color: $white-dark;
-                    max-width: 270px;
-                    .title {
-                        color: $black-dark;
-                        font-size: 24px;
-                        line-height: 24px;
-                        margin-bottom: 28px;
-                    }
-                    .highlight {
-                        margin-top: 23px;
-                        font-size: 21px;
-                        line-height: 21px;
-                        color: $green-light;
-                    }
-                    @media screen and (max-width: $xl) {
-                        top: unset;
-                        bottom: -10%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        max-height: 175px;
-                    }
-                }
-                @media screen and (max-width: $xl) {
-                    text-align: center;
-                    .image {
-                        width: 100%;
-                    }
-                }
-                @media screen and (max-width: $md) {
-                    .image {
-                        width: 100%;
-                    }
-                    .card {
-                        max-width: 170px;
-                        max-height: 105px;
-                        .title {
-                            font-size: 13px;
-                            margin-bottom: 10px;
-                        }
-                        .highlight {
-                            margin-top: 10px;
-                            font-size: 10px;
-                            line-height: 15px;
-                        }
-                    }
-                }
-            }
-        }
-        .contentRight {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: 145px;
-            margin-left: 30px;
-            .title {
-                color: $green-light;
-                font-size: 33px;
-                font-weight: bold;
-                line-height: 45px;
-            }
-            .description {
-                margin-top: 40px;
-                color: $grey;
-                font-size: 18px;
-                line-height: 28px;
-            }
-            .checkList {
-                margin-top: 45px;
-                color: $black-dark;
-                font-size: 21px;
-                line-height: 35px;
-            }
-        }
-        @media screen and (max-width: $xl) {
-            padding: 71px 97px;
-            flex-direction: column;
-            .contentRight {
-                margin-left: 0;
-                margin-top: 100px;
-                .description {
-                    padding: 0 20px;
-                }
-            }
-        }
-        @media screen and (max-width: $md) {
-            padding: 67px 40px;
-            .contentRight {
-                align-items: center;
-                text-align: center;
-                .title {
-                    font-size: 24px;
-                    line-height: 36px;
-                }
-                .description {
-                    margin-top: 15px;
-                    font-size: 12px;
-                    line-height: 18px;
-                }
-                .checkList {
-                    margin-top: 10px;
-                    font-size: 10px;
-                    line-height: 16px;
-                }
-            }
-        }
-    }
-    .category {
-        background-color: $grey-light;
-        padding: 0 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+	.findFree {
+		background-color: $yellow;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 6%;
+		padding-right: 2%;
+		color: $blue-dark;
+		.leftSide {
+			.title {
+				font-size: 70px;
+				font-weight: bold;
+				line-height: 75px;
+				position: relative;
+				color: $black-light;
+				.curve {
+					position: absolute;
+					bottom: -17%;
+					left: 25%;
+				}
+			}
+			.content {
+				font-size: 24px;
+				line-height: 40px;
+				max-width: 560px;
+				margin-top: 55px;
+			}
+			.popular {
+				font-size: 18px;
+				line-height: 18px;
+				display: flex;
+				align-items: center;
+				.popularItem {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+		.person {
+			height: 630px;
+			transform: scaleX(-1);
+			vertical-align: middle;
+		}
+		@media screen and (max-width: $xxl) {
+			.leftSide {
+				.title {
+					font-size: 30px;
+					line-height: 33px;
+					.curve {
+						width: 83px;
+						left: 30%;
+						bottom: -30%;
+					}
+				}
+				.content {
+					margin-top: 32px;
+					font-size: 14px;
+					line-height: 21px;
+					max-width: 270px;
+				}
+				.popular {
+					font-size: 10px;
+					.icon {
+						svg {
+							width: 12px;
+							height: 12px;
+						}
+					}
+				}
+			}
+			.person {
+				height: 366px;
+			}
+		}
+		@media screen and (max-width: $md) {
+			position: relative;
+			padding: 42px 22px 65px 22px;
+			.leftSide {
+				.content {
+					max-width: 115px;
+				}
+				.popular {
+					display: none;
+				}
+			}
+			.person {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 263px;
+				width: 228px;
+			}
+		}
+	}
+	.banner {
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $grey-light;
+		filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+		& > div {
+			&:first-child {
+				font-size: 18px;
+				font-weight: bold;
+				margin-right: 16px;
+			}
+			&:not(:first-child) {
+				margin-right: 60px;
+			}
+		}
+		@media screen and (max-width: $xxl) {
+			& > div {
+				&:not(:first-child) {
+					margin-right: 40px;
+				}
+			}
+		}
+		@media screen and (max-width: $md) {
+			padding: 12px;
+			& > div {
+				&:first-child {
+					font-size: 10px;
+					margin-right: 3px;
+				}
+				&:not(:first-child) {
+					margin-right: 10px;
+					svg {
+						width: 50px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $sm) {
+			padding: 5px;
+			& > div {
+				&:first-child {
+					font-size: 10px;
+					margin-right: 3px;
+				}
+				&:not(:first-child) {
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+	.cardContainer {
+		.title {
+			color: $green-light;
+			font-size: 39px;
+			font-weight: bold;
+			line-height: 39px;
+			border-bottom: 3px solid $yellow-dark;
+			width: fit-content;
+			padding-bottom: 10px;
+			@media screen and (max-width: $xxl) {
+				font-size: 30px;
+				line-height: 45px;
+			}
+			@media screen and (max-width: $md) {
+				font-size: 22px;
+				// text-align: center;
+				margin: auto;
+			}
+		}
+		.topRate {
+			padding: 50px 120px;
+			.container {
+				width: 100%;
+				display: flex;
+				margin: 50px 0 70px 0;
+				& > div {
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+			.arrow {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+			}
+			.right {
+				left: unset;
+				right: 0;
+			}
+			:global(.control-dots) {
+				:global(.dot) {
+					background-color: $green;
+					width: 15px;
+					height: 15px;
+				}
+			}
+			@media screen and (max-width: $xxl) {
+				padding: 45px 50px;
+			}
+			@media screen and (max-width: $md) {
+				padding: 50px 20px;
+				.container {
+					justify-content: center;
+				}
+			}
+		}
+		.popularService {
+			padding: 0 120px 160px 120px;
+			.wrapper {
+				margin-top: 40px;
+				width: 100%;
+				:global(.react-multiple-carousel__arrow--left) {
+					transform: translateY(-50%);
+					top: 50%;
+					left: 0;
+				}
+				:global(.react-multiple-carousel__arrow--right) {
+					transform: translateY(-50%);
+					top: 50%;
+					right: 0;
+				}
+			}
+			@media screen and (max-width: $xxl) {
+				padding: 0 60px 110px 60px;
+			}
+			@media screen and (max-width: $md) {
+				padding: 20px;
+			}
+		}
+	}
+	.fingertips {
+		padding: 70px 70px 70px 115px;
+		background-color: $white;
+		color: $black;
+		.title {
+			font-size: 49px;
+			line-height: 67px;
+			font-weight: bold;
+		}
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.leftSide {
+				width: 50%;
+				.card {
+					margin-top: 50px;
+					display: flex;
+					align-items: center;
+					.image {
+						svg {
+							width: 93px;
+							height: 92px;
+						}
+					}
+					.content {
+						margin-left: 10px;
+						.title {
+							font-size: 26px;
+							line-height: 40px;
+						}
+						.description {
+							font-size: 26px;
+							line-height: 40px;
+						}
+					}
+				}
+			}
+			.rightSide {
+				position: relative;
+				width: 45%;
+				margin-left: 5%;
+				img {
+					width: 100%;
+					position: relative;
+					z-index: 2;
+				}
+				.rectYellow {
+					position: absolute;
+					top: -20px;
+					right: -20px;
+				}
+				.rectGreen {
+					position: absolute;
+					bottom: -20px;
+					left: 20px;
+				}
+			}
+		}
+		@media screen and (max-width: $xl) {
+			padding: 57px;
+			.title {
+				font-size: 25px;
+				line-height: 39px;
+			}
+			.container {
+				margin-top: 20px;
+				flex-direction: column-reverse;
+				.leftSide {
+					width: 100%;
+					margin-top: 25px;
+					.card {
+						width: 100%;
+						margin-top: 25px;
+						.image {
+							svg {
+								width: 56px;
+								height: 56px;
+							}
+						}
+						.content {
+							.title {
+								font-size: 20px;
+							}
+							.description {
+								font-size: 16px;
+								line-height: 26px;
+							}
+						}
+					}
+				}
+				.rightSide {
+					width: 100%;
+					max-width: 650px;
+					margin-left: 0;
+				}
+			}
+		}
+		@media screen and (max-width: $md) {
+			padding: 45px 18px;
+			.title {
+				font-size: 20px;
+				line-height: 30px;
+			}
+			.container {
+				.leftSide {
+					.card {
+						width: 100%;
+						margin-top: 10px;
+						.image {
+							svg {
+								width: 33px;
+								height: 33px;
+							}
+						}
+						.content {
+							.title {
+								font-size: 12px;
+								line-height: 25px;
+							}
+							.description {
+								font-size: 9px;
+								line-height: 15px;
+							}
+						}
+					}
+				}
+				.rightSide {
+					max-width: unset;
+					.rectYellow {
+						width: 35px;
+						height: 45px;
+						top: -10px;
+						right: -10px;
+					}
+					.rectGreen {
+						width: 35px;
+						height: 45px;
+						bottom: -10px;
+						left: 10px;
+					}
+				}
+			}
+		}
+	}
+	.logoMaker {
+		margin-top: 140px;
+		background-color: $grey;
+		background-image: url("../../assets/landing/logoMaker.svg");
+		background-position: right center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		padding: 70px 100px;
+		border-top: 5px solid $yellow-dark;
+		border-bottom: 5px solid $yellow-dark;
+		color: $white-dark;
+		.title {
+			font-size: 53px;
+			font-weight: bold;
+			line-height: 53px;
+		}
+		.description {
+			font-size: 28px;
+			line-height: 42px;
+			margin: 45px 0;
+			max-width: 375px;
+		}
+		.button {
+			font-size: 22px;
+		}
+		@media screen and (max-width: $xxl) {
+			margin-top: 60px;
+			background-image: url("../../assets/landing/logoMaker.svg");
+			.title {
+				font-size: 39px;
+				line-height: 39px;
+			}
+			.description {
+				font-size: 22px;
+				line-height: 35px;
+				margin: 20px 0;
+			}
+			.button {
+				font-size: 12px;
+			}
+		}
+		@media screen and (max-width: $xl) {
+			padding: 18px 50px;
+			.title {
+				max-width: 235px;
+				font-size: 29px;
+				line-height: 43.5px;
+			}
+			.description {
+				font-size: 16px;
+				line-height: 24px;
+				max-width: 211px;
+			}
+		}
+		@media screen and (max-width: $md) {
+			margin-top: 58px;
+			padding: 36px 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			background-image: unset;
+			.title {
+				max-width: unset;
+				font-size: 24px;
+				line-height: 36px;
+			}
+			.description {
+				margin: 33px 0;
+				text-align: center;
+				max-width: 290px;
+			}
+			.logoMakerMobile {
+				width: 100%;
+				padding: 0 20px;
+				border-top: 3px solid $yellow-dark;
+				border-bottom: 3px solid $yellow-dark;
+			}
+		}
+	}
+	.getBestJob {
+		padding: 140px 90px;
+		display: flex;
+		background-color: $grey-light;
+		.contentLeft {
+			.container {
+				position: relative;
+				.image {
+					height: 100%;
+					// border: 5px solid $yellow-dark;
+					border-top-right-radius: 119px;
+					border-bottom-left-radius: 119px;
+				}
+				.card {
+					position: absolute;
+					top: -12%;
+					right: -22%;
+					padding: 37px 23px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					border-radius: 8px;
+					filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.08));
+					background-color: $white-dark;
+					max-width: 270px;
+					.title {
+						color: $black-dark;
+						font-size: 24px;
+						line-height: 24px;
+						margin-bottom: 28px;
+					}
+					.highlight {
+						margin-top: 23px;
+						font-size: 21px;
+						line-height: 21px;
+						color: $green-light;
+					}
+					@media screen and (max-width: $xl) {
+						top: unset;
+						bottom: -10%;
+						left: 50%;
+						transform: translateX(-50%);
+						max-height: 175px;
+					}
+				}
+				@media screen and (max-width: $xl) {
+					text-align: center;
+					.image {
+						width: 100%;
+					}
+				}
+				@media screen and (max-width: $md) {
+					.image {
+						width: 100%;
+					}
+					.card {
+						max-width: 170px;
+						max-height: 105px;
+						.title {
+							font-size: 13px;
+							margin-bottom: 10px;
+						}
+						.highlight {
+							margin-top: 10px;
+							font-size: 10px;
+							line-height: 15px;
+						}
+					}
+				}
+			}
+		}
+		.contentRight {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			margin-top: 145px;
+			margin-left: 30px;
+			.title {
+				color: $green-light;
+				font-size: 33px;
+				font-weight: bold;
+				line-height: 45px;
+			}
+			.description {
+				margin-top: 40px;
+				color: $grey;
+				font-size: 18px;
+				line-height: 28px;
+			}
+			.checkList {
+				margin-top: 45px;
+				color: $black-dark;
+				font-size: 21px;
+				line-height: 35px;
+			}
+		}
+		@media screen and (max-width: $xl) {
+			padding: 71px 97px;
+			flex-direction: column;
+			.contentRight {
+				margin-left: 0;
+				margin-top: 100px;
+				.description {
+					padding: 0 20px;
+				}
+			}
+		}
+		@media screen and (max-width: $md) {
+			padding: 67px 40px;
+			.contentRight {
+				align-items: center;
+				text-align: center;
+				.title {
+					font-size: 24px;
+					line-height: 36px;
+				}
+				.description {
+					margin-top: 15px;
+					font-size: 12px;
+					line-height: 18px;
+				}
+				.checkList {
+					margin-top: 10px;
+					font-size: 10px;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+	.category {
+		background-color: $grey-light;
+		padding: 0 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 
-        .title {
-            font-weight: bold;
-            color: $green-light;
-            font-size: 37px;
-            line-height: 56px;
-        }
-        .subTitle {
-            margin-top: 22px;
-            color: $grey;
-            font-size: 20px;
-            line-height: 30px;
-            max-width: 550px;
-        }
-        .content {
-            margin-top: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        @media screen and (max-width: $md) {
-            padding: 20px;
-            .title {
-                font-size: 23px;
-                line-height: 35px;
-            }
-            .subTitle {
-                font-size: 13px;
-                line-height: 20px;
-            }
-            .content {
-                margin-top: 30px;
-                flex-direction: column;
-            }
-        }
-    }
-    .feedback {
-        padding: 90px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        // background-color: $grey-light;
-        .cardContainer {
-            display: flex;
-        }
-        .cardContainerTablet {
-            display: none;
-        }
-        .content {
-            margin-left: 120px;
-            .title {
-                color: $green;
-                font-size: 30px;
-                line-height: 45px;
-            }
-            .description {
-                margin-top: 15px;
-                color: $grey;
-                font-size: 16px;
-                line-height: 24px;
-            }
-            .like {
-                margin-top: 65px;
-                margin-left: 30px;
-                width: fit-content;
-                .subTitle {
-                    color: $black;
-                    font-size: 17px;
-                }
-                .imgContainer {
-                    margin-top: 20px;
-                    .image {
-                        &:first-child {
-                            margin-left: 0;
-                        }
-                        margin-left: -50px;
-                        width: 85px;
-                        height: 85px;
-                        &:last-child {
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .arrows {
-                    margin-top: 50px;
-                    text-align: center;
-                    svg {
-                        width: 50px;
-                        height: 50px;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: $xxl) {
-            flex-direction: column;
-            padding: 50px;
-            .cardContainer {
-                display: none;
-            }
-            .content {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                margin-left: 0;
-                .description {
-                    text-align: center;
-                    max-width: 480px;
-                }
-                .cardContainerTablet {
-                    display: flex;
-                    @media screen and (max-width: $md) {
-                        display: none;
-                    }
-                }
-                .like {
-                    display: flex;
-                    flex-direction: column-reverse;
-                    margin-top: 0;
-                    .subTitle {
-                        font-size: 24px;
-                        line-height: 36px;
-                    }
-                    .imgContainer {
-                        display: flex;
-                        .image {
-                            @media screen and (max-width: $sm) {
-                                margin-left: -65px;
-                            }
-                        }
-                    }
-                    .arrows {
-                        margin: 20px 0;
-                    }
-                }
-            }
-        }
-        @media screen and (max-width: $md) {
-            padding: 35px 60px;
-            .content {
-                .title {
-                    font-size: 23px;
-                    line-height: 35px;
-                }
-                .description {
-                    font-size: 14px;
-                    line-height: 21px;
-                    padding: 0 20px;
-                }
-                .like {
-                    margin-left: 0;
-                    .subTitle {
-                        font-size: 12px;
-                        color: $black-dark;
-                    }
-                    .imgContainer {
-                        margin-top: 0;
-                        .image {
-                            width: 45px;
-                            height: 45px;
-                            margin-left: -25px;
-                        }
-                    }
-                    .arrows {
-                        margin: 10px 0;
-                        svg {
-                            width: 32px;
-                            height: 32px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .business {
-        background-color: $white;
-        padding: 130px 0 30px 0;
-        .container {
-            background-image: url("../../assets/landing/working-from-home.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            padding: 113px;
-            height: 678px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .title {
-                font-size: 45px;
-                font-weight: bold;
-                line-height: 67.5px;
-                color: $green;
-                .highlight {
-                    font-style: italic;
-                    font-weight: 400;
-                }
-            }
-            button {
-                padding: 20px;
-                margin-top: 50px;
-                font-size: 18px;
-                line-height: 27px;
-                max-width: 190px;
-            }
-        }
-        @media screen and (max-width: $xl) {
-            .container {
-                padding: 26px 46px;
-                height: 358px;
-                justify-content: unset;
-                .title {
-                    font-size: 26px;
-                    line-height: 42px;
-                }
-                button {
-                    padding: 6px 10px;
-                    margin-top: 10px;
-                    font-size: 12px;
-                    max-width: 110px;
-                }
-            }
-        }
-        @media screen and (max-width: $md) {
-            padding: 0;
-            .container {
-                display: block;
-                background-image: url("../../assets/landing/working-from-home-mobile.png");
-                padding: 19px 15px;
-                background-position: top;
-                height: 160px;
-                .title {
-                    font-size: 14px;
-                    line-height: 20px;
-                }
-                button {
-                    margin-top: 10px;
-                    font-size: 7px;
-                    line-height: 18px;
-                    padding: 4px 7px;
-                }
-            }
-        }
-    }
+		.title {
+			font-weight: bold;
+			color: $green-light;
+			font-size: 37px;
+			line-height: 56px;
+		}
+		.subTitle {
+			margin-top: 22px;
+			color: $grey;
+			font-size: 20px;
+			line-height: 30px;
+			max-width: 550px;
+		}
+		.content {
+			margin-top: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+		}
+		@media screen and (max-width: $md) {
+			padding: 20px;
+			.title {
+				font-size: 23px;
+				line-height: 35px;
+			}
+			.subTitle {
+				font-size: 13px;
+				line-height: 20px;
+			}
+			.content {
+				margin-top: 30px;
+				flex-direction: column;
+			}
+		}
+	}
+	.feedback {
+		padding: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// background-color: $grey-light;
+		.cardContainer {
+			display: flex;
+		}
+		.cardContainerTablet {
+			display: none;
+		}
+		.content {
+			margin-left: 120px;
+			.title {
+				color: $green;
+				font-size: 30px;
+				line-height: 45px;
+			}
+			.description {
+				margin-top: 15px;
+				color: $grey;
+				font-size: 16px;
+				line-height: 24px;
+			}
+			.like {
+				margin-top: 65px;
+				margin-left: 30px;
+				width: fit-content;
+				.subTitle {
+					color: $black;
+					font-size: 17px;
+				}
+				.imgContainer {
+					margin-top: 20px;
+					.image {
+						&:first-child {
+							margin-left: 0;
+						}
+						margin-left: -50px;
+						width: 85px;
+						height: 85px;
+						&:last-child {
+							cursor: pointer;
+						}
+					}
+				}
+				.arrows {
+					margin-top: 50px;
+					text-align: center;
+					svg {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $xxl) {
+			flex-direction: column;
+			padding: 50px;
+			.cardContainer {
+				display: none;
+			}
+			.content {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				margin-left: 0;
+				.description {
+					text-align: center;
+					max-width: 480px;
+				}
+				.cardContainerTablet {
+					display: flex;
+					@media screen and (max-width: $md) {
+						display: none;
+					}
+				}
+				.like {
+					display: flex;
+					flex-direction: column-reverse;
+					margin-top: 0;
+					.subTitle {
+						font-size: 24px;
+						line-height: 36px;
+					}
+					.imgContainer {
+						display: flex;
+						.image {
+							@media screen and (max-width: $sm) {
+								margin-left: -65px;
+							}
+						}
+					}
+					.arrows {
+						margin: 20px 0;
+					}
+				}
+			}
+		}
+		@media screen and (max-width: $md) {
+			padding: 35px 60px;
+			.content {
+				.title {
+					font-size: 23px;
+					line-height: 35px;
+				}
+				.description {
+					font-size: 14px;
+					line-height: 21px;
+					padding: 0 20px;
+				}
+				.like {
+					margin-left: 0;
+					.subTitle {
+						font-size: 12px;
+						color: $black-dark;
+					}
+					.imgContainer {
+						margin-top: 0;
+						.image {
+							width: 45px;
+							height: 45px;
+							margin-left: -25px;
+						}
+					}
+					.arrows {
+						margin: 10px 0;
+						svg {
+							width: 32px;
+							height: 32px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.business {
+		background-color: $white;
+		padding: 130px 0 30px 0;
+		.container {
+			background-image: url("../../assets/landing/working-from-home.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding: 113px;
+			height: 678px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.title {
+				font-size: 45px;
+				font-weight: bold;
+				line-height: 67.5px;
+				color: $green;
+				.highlight {
+					font-style: italic;
+					font-weight: 400;
+				}
+			}
+			button {
+				padding: 20px;
+				margin-top: 50px;
+				font-size: 18px;
+				line-height: 27px;
+				max-width: 190px;
+			}
+		}
+		@media screen and (max-width: $xl) {
+			.container {
+				padding: 26px 46px;
+				height: 358px;
+				justify-content: unset;
+				.title {
+					font-size: 26px;
+					line-height: 42px;
+				}
+				button {
+					padding: 6px 10px;
+					margin-top: 10px;
+					font-size: 12px;
+					max-width: 110px;
+				}
+			}
+		}
+		@media screen and (max-width: $md) {
+			padding: 0;
+			.container {
+				display: block;
+				background-image: url("../../assets/landing/working-from-home-mobile.png");
+				padding: 19px 15px;
+				background-position: top;
+				height: 160px;
+				.title {
+					font-size: 14px;
+					line-height: 20px;
+				}
+				button {
+					margin-top: 10px;
+					font-size: 7px;
+					line-height: 18px;
+					padding: 4px 7px;
+				}
+			}
+		}
+	}
 }

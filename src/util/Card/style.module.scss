@@ -35,6 +35,7 @@ $yellow: #fed821;
 				border-top-left-radius: 50px;
 				border-bottom-left-radius: 50px;
 				border-right-width: 0;
+				white-space: nowrap;
 				width: 60%;
 				color: $blue-dark;
 				.level {
@@ -44,6 +45,16 @@ $yellow: #fed821;
 					font-size: 22px;
 					font-weight: bold;
 					line-height: 30px;
+				}
+				@media screen and (max-width: $md) {
+					.level {
+						font-size: 13px;
+						line-height: 20px;
+					}
+					.name {
+						line-height: 22.5px;
+						font-size: 15px;
+					}
 				}
 			}
 			.right {
@@ -64,6 +75,16 @@ $yellow: #fed821;
 					font-size: 17px;
 					font-weight: bold;
 				}
+				@media screen and (max-width: $md) {
+					.text {
+						font-size: 13px;
+						line-height: 20px;
+					}
+					.rate {
+						font-size: 15px;
+						line-height: 23px;
+					}
+				}
 			}
 		}
 		.role {
@@ -72,15 +93,23 @@ $yellow: #fed821;
 			font-size: 16px;
 			line-height: 25px;
 			text-decoration: underline;
-			text-align: center;
+			height: 55px;
+			text-align: left;
+			@media screen and (max-width: $md) {
+				font-size: 10px;
+				line-height: 15px;
+				height: unset;
+			}
 		}
 		.skills {
-			padding: 20px 14px;
+			padding: 0 14px 20px 14px;
 			display: flex;
 			flex-flow: row wrap;
 			font-size: 13px;
+			line-height: 16px;
 			& > div {
-				margin-right: 14px;
+				margin-top: 20px;
+				margin-right: 20px;
 				color: $grey-dark;
 			}
 		}

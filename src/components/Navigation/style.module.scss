@@ -1,79 +1,79 @@
 @import "constants/variables.scss";
 
 .navbar {
-    margin: 26px 150px;
-    @media screen and (max-width: $xxl) {
-        margin: 10px 20px;
-    }
-    .readyVladeLogo {
-        height: 94px;
-        width: 265px;
-        @media screen and (max-width: $xxl) {
-            height: 45px;
-            width: 141px;
-        }
-    }
-    &:global(.navbar) {
-        align-items: flex-end;
-        @media screen and (max-width: $sm) {
-            justify-content: space-between;
-            align-items: center;
-        }
-        // :global(.navbar-brand) {
-        //     @media screen and (max-width: $sm) {
-        //         position: absolute;
-        //         left: 50%;
-        //         top: 0;
-        //         transform: translateX(-50%);
-        //     }
-        // }
-        :global(.navbar-toggler) {
-            border-width: 0;
-            &:focus {
-                box-shadow: unset;
-            }
-        }
-        :global(.navbar-collapse) {
-            justify-content: flex-end;
-            :global(.navbar-nav) {
-                align-items: center;
-                :global(.nonAuthButton) {
-                    & > a {
-                        color: $black;
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
-                :global(.authButton) {
-                    color: $black;
-                    display: flex;
-                    align-items: center;
-                    padding: 10px 40px;
-                    text-decoration: none;
+	margin: 26px 150px;
+	@media screen and (max-width: $xxl) {
+		margin: 10px 20px;
+	}
+	.readyVladeLogo {
+		height: 94px;
+		width: 265px;
+		@media screen and (max-width: $xxl) {
+			height: 45px;
+			width: 141px;
+		}
+	}
+	&:global(.navbar) {
+		align-items: flex-end;
+		@media screen and (max-width: $sm) {
+			justify-content: space-between;
+			align-items: center;
+		}
+		// :global(.navbar-brand) {
+		//     @media screen and (max-width: $sm) {
+		//         position: absolute;
+		//         left: 50%;
+		//         top: 0;
+		//         transform: translateX(-50%);
+		//     }
+		// }
+		:global(.navbar-toggler) {
+			border-width: 0;
+			&:focus {
+				box-shadow: unset;
+			}
+		}
+		:global(.navbar-collapse) {
+			justify-content: flex-end;
+			:global(.navbar-nav) {
+				align-items: center;
+				:global(.nonAuthButton) {
+					& > a {
+						color: $black;
+						&:after {
+							display: none;
+						}
+					}
+				}
+				:global(.authButton) {
+					color: $black;
+					display: flex;
+					align-items: center;
+					padding: 10px 40px;
+					text-decoration: none;
 
-                    &:global(.--sign-in) {
-                        background-color: $green;
-                        border-radius: 8px;
-                        color: $white;
-                    }
+					&:global(.--sign-in) {
+						background-color: $green;
+						border-radius: 8px;
+						color: $white;
+					}
 
-                    &:global(.--sign-up) {
-                        color: $green;
-                        margin: 0 0 0 20px;
-                        @media screen and (max-width: $md) {
-                            margin: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
+					&:global(.--sign-up) {
+						color: $green;
+						margin: 0 0 0 20px;
+						@media screen and (max-width: $md) {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .divider {
-    width: 100%;
-    height: 7px;
-    background-color: $blue-dark;
-    filter: drop-shadow(0px 7px 4.5px rgba(0, 0, 0, 0.16));
+	width: 100%;
+	height: 7px;
+	background-color: $blue-dark;
+	filter: drop-shadow(0px 7px 4.5px rgba(0, 0, 0, 0.16));
 }
