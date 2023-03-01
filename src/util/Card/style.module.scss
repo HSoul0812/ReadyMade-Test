@@ -106,8 +106,8 @@ $yellow: #fed821;
 		font-weight: bold;
 	}
 	@media screen and (max-width: $xxl) {
-		width: 229px;
-		height: 275px;
+		width: 300px;
+		height: 363px;
 		.title {
 			font-size: 14px;
 		}
@@ -148,6 +148,23 @@ $yellow: #fed821;
 	}
 	@media screen and (max-width: $md) {
 		margin: 0;
+		width: 300px;
+		.title {
+			margin-top: 23px;
+			font-size: 17px;
+			line-height: 25px;
+		}
+		.description {
+			margin-top: 14px;
+			font-size: 14px;
+			line-height: 21px;
+			max-width: 200px;
+			height: 65px;
+		}
+		.highlight {
+			font-size: 12px;
+			line-height: 18px;
+		}
 	}
 }
 .customer {
@@ -176,5 +193,13 @@ $yellow: #fed821;
 	}
 	@media screen and (max-width: $md) {
 		margin: 25px 0;
+		.avatar {
+			width: 55px;
+			height: 55px;
+		}
+		.name {
+			font-size: 17px;
+			line-height: 25px;
+		}
 	}
 }

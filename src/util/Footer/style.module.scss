@@ -3,20 +3,22 @@
 .footerDesktop {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 800px;
     padding: 100px;
     .leftSide {
-        width: 40%;
-        p {
-            font-size: 14px;
-            line-height: 30px;
-            color: $grey;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
         .logo {
             width: 200px;
             height: 71px;
+        }
+        p {
+            margin-top: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            color: $grey;
         }
     }
     .rightSide {
@@ -30,7 +32,7 @@
                 font-size: 23px;
             }
             .content {
-                margin-top: 120px;
+                margin-top: 75px;
                 .item {
                     font-size: 21px;
                     margin-bottom: 60px;

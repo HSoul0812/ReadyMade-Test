@@ -6,11 +6,12 @@ import Person2 from 'assets/landing/person2.png'
 import CustomerCard from 'util/Card/Customer'
 import styles from './style.module.scss'
 import { ArrowLeftCircle, ArrowRightCircle } from 'react-bootstrap-icons'
-import useIsMobile from 'util/Hooks/isMobile'
+import useIsMobile, { useIsTablet } from 'util/Hooks/isMobile'
 
 const CustomerFeedback = () => {
   const people = Array(9).fill('')
   const { isMobile } = useIsMobile()
+  const { isTablet } = useIsTablet()
   const feedback = [
     {
       bio:
@@ -38,29 +39,39 @@ const CustomerFeedback = () => {
           Phasellus malesuada erat ut lectus accumsan varius. Nullam non quam
           sed elit tincidunt rhoncus.
         </div>
+
+        <div
+          className={`${styles.cardContainerTablet} align-items-stretch my-5`}
+        >
+          {feedback.map((item, idx) => (
+            <CustomerCard data={item} key={idx} />
+          ))}
+        </div>
         {isMobile && <CustomerCard data={feedback[0]} />}
         <div className={styles.like}>
-          <div className={styles.subTitle}>2500 people loves</div>
-          <div className={styles.imgContainer}>
-            {people.map((_, idx) => (
+          <div>
+            <div className={styles.subTitle}>2500 people loves</div>
+            <div className={styles.imgContainer}>
+              {people.map((_, idx) => (
+                <Image
+                  src={Person1}
+                  alt="Person"
+                  key={idx}
+                  roundedCircle
+                  className={styles.image}
+                />
+              ))}
               <Image
-                src={Person1}
-                alt="Person"
-                key={idx}
+                src={AddIcon}
+                alt="Add"
                 roundedCircle
                 className={styles.image}
               />
-            ))}
-            <Image
-              src={AddIcon}
-              alt="Add"
-              roundedCircle
-              className={styles.image}
-            />
+            </div>
           </div>
           <div className={styles.arrows}>
-            <ArrowLeftCircle color="grey" size={50} />
-            <ArrowRightCircle className="ms-5" size={50} />
+            <ArrowLeftCircle color="grey" />
+            <ArrowRightCircle className="ms-5" />
           </div>
         </div>
         {isMobile && <CustomerCard data={feedback[1]} />}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import cn from 'classnames'
-import { Square } from 'react-bootstrap-icons'
+import { QuestionSquare } from 'react-bootstrap-icons'
 import * as ROUTES from 'constants/routes'
 import Logo from 'assets/logo.svg'
 import styles from '../style.module.scss'
@@ -12,17 +12,17 @@ const FooterDesktop = () => {
       items: [
         {
           title: 'About Us',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.ABOUTUS,
         },
         {
           title: 'Features',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.FEATURES,
         },
         {
           title: 'How it Works',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.HOWITWORKS,
         },
       ],
@@ -32,17 +32,17 @@ const FooterDesktop = () => {
       items: [
         {
           title: 'FAQ',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.FAQ,
         },
         {
           title: 'Contact',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.CONTACT,
         },
         {
           title: 'Shopping',
-          icon: <Square size={18} />,
+          icon: <QuestionSquare size={18} />,
           link: ROUTES.SHOPPING,
         },
       ],
@@ -66,12 +66,26 @@ const FooterDesktop = () => {
   return (
     <div className={styles.footerDesktop}>
       <div className={styles.leftSide}>
-        <p>
-          Morbi convallis bibendum urna ut viverra. Maecenas quis consequat
-          libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet
-          ullamcorper phasellus semper.
-        </p>
-        <img src={Logo} alt="logo" className={styles.logo} />
+        <div>
+          <img src={Logo} alt="logo" className={styles.logo} />
+          <p>
+            Morbi convallis bibendum urna ut viverra. Maecenas quis consequat
+            libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies
+            laoreet ullamcorper phasellus semper.
+          </p>
+        </div>
+        <div className="d-flex">
+          {Array(5)
+            .fill(0)
+            .map((_, index) => (
+              <QuestionSquare
+                key={index}
+                color="#009800"
+                size={25}
+                className="me-3"
+              />
+            ))}
+        </div>
       </div>
       <div className={styles.rightSide}>
         {NavigationLinks.map((navigation, idx) => (
