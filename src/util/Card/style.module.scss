@@ -95,6 +95,8 @@ $yellow: #fed821;
 			text-decoration: underline;
 			height: 55px;
 			text-align: left;
+			display: flex;
+			align-items: center;
 			@media screen and (max-width: $md) {
 				font-size: 10px;
 				line-height: 15px;
