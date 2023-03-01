@@ -47,6 +47,18 @@ const FooterTablet = () => {
           </div>
         </div>
       </div>
+      <div className="d-flex my-4">
+        {Array(5)
+          .fill(0)
+          .map((_, index) => (
+            <QuestionSquare
+              key={index}
+              color="#009800"
+              size={25}
+              className="me-3"
+            />
+          ))}
+      </div>
       <div className="d-flex">
         <div className={cn(styles.title, styles.contact)}>
           Contact Us
