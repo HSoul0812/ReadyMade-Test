@@ -42,7 +42,6 @@ $grey: #959595;
         }
         .person {
             height: 630px;
-            width: fit-content;
             transform: scaleX(-1);
             vertical-align: middle;
         }
@@ -74,7 +73,7 @@ $grey: #959595;
         }
         @media screen and (max-width: $md) {
             position: relative;
-            padding: 42px 22px 76px 22px;
+            padding: 42px 22px 65px 22px;
             .leftSide {
                 .content {
                     max-width: 115px;
@@ -87,8 +86,8 @@ $grey: #959595;
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                height: 295px;
-                width: 250px;
+                height: 263px;
+                width: 228px;
             }
         }
     }
@@ -121,6 +120,18 @@ $grey: #959595;
                     svg {
                         width: 50px;
                     }
+                }
+            }
+        }
+        @media screen and (max-width: $sm) {
+            padding: 5px;
+            & > div {
+                &:first-child {
+                    font-size: 10px;
+                    margin-right: 3px;
+                }
+                &:not(:first-child) {
+                    margin-right: 3px;
                 }
             }
         }
@@ -617,12 +628,27 @@ $grey: #959595;
             }
             button {
                 padding: 20px;
+                margin-top: 50px;
                 font-size: 18px;
                 line-height: 27px;
                 max-width: 190px;
             }
-            @media screen and (max-width: $xl) {
-                height: 508px;
+        }
+        @media screen and (max-width: $xl) {
+            .container {
+                padding: 26px 46px;
+                height: 358px;
+                justify-content: unset;
+                .title {
+                    font-size: 26px;
+                    line-height: 42px;
+                }
+                button {
+                    padding: 6px 10px;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    max-width: 110px;
+                }
             }
         }
         @media screen and (max-width: $md) {
@@ -637,11 +663,11 @@ $grey: #959595;
                     font-size: 14px;
                     line-height: 20px;
                 }
-                .button {
-                    font-size: 12px;
+                button {
+                    margin-top: 10px;
+                    font-size: 7px;
                     line-height: 18px;
-                    padding: 13px 10px;
-                    max-width: 100px;
+                    padding: 7px;
                 }
             }
         }

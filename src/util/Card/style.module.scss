@@ -26,12 +26,15 @@ $yellow: #fed821;
 		height: 100%;
 		.bio {
 			margin: 15px;
-			border: 1px solid $yellow;
 			display: flex;
 			border-radius: 50px;
 			.left {
-				margin: 5px 28px;
+				padding: 5px 28px;
 				background-color: transparent;
+				border: 1px solid $yellow;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				border-right-width: 0;
 				width: 60%;
 				color: $blue-dark;
 				.level {
@@ -45,7 +48,7 @@ $yellow: #fed821;
 			}
 			.right {
 				background-color: $green-light;
-				outline: 1px solid $green-light;
+				// outline: 1px solid $green-light;
 				border-top-right-radius: 50px;
 				border-bottom-right-radius: 50px;
 				width: 40%;
@@ -142,6 +145,9 @@ $yellow: #fed821;
 		color: $green;
 		font-size: 17px;
 		line-height: 17px;
+	}
+	@media screen and (max-width: $md) {
+		margin: 0;
 	}
 }
 .customer {

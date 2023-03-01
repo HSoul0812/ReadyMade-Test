@@ -9,7 +9,7 @@ const BusinessGrowing = () => {
           Find the talent needed to get <br />
           your business <span className={styles.highlight}>growing.</span>
         </div>
-        <Button className="mt-5">Get Standerd</Button>
+        <Button>Get Standerd</Button>
       </div>
     </div>
   )
