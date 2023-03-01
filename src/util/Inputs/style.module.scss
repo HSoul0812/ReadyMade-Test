@@ -7,9 +7,12 @@
     :global(.form-control) {
         height: 77px;
         font-size: 18px;
-        color: $black-light;
+        color: $black;
         border: 1px solid $black-light;
         padding-left: 33px;
+        &::placeholder {
+            color: $black;
+        }
         @media screen and (max-width: $xxl) {
             height: 37px;
             font-size: 12px;
