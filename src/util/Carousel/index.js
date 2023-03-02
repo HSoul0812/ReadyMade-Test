@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { Carousel } from 'react-responsive-carousel'
 import useIsMobile, { useIsSmallScreen, useIsTablet } from 'util/Hooks/isMobile'
 
@@ -27,11 +28,19 @@ const CustomCarousel = ({
       array = []
     }
   })
-
+  const hasRest = !(newItems[newItems.length - 1].length === initialCount)
   return (
     <Carousel {...rest}>
       {newItems.map((items, idx) => (
-        <div className={containerClass} key={idx}>
+        <div
+          className={cn(containerClass)}
+          style={
+            count === 1 || (hasRest && idx === newItems.length - 1)
+              ? { justifyContent: 'center' }
+              : { justifyContent: 'space-between' }
+          }
+          key={idx}
+        >
           {items.map((item, key) => (
             <Card data={item} key={key} />
           ))}

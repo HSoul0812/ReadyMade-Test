@@ -111,7 +111,7 @@ const PopularService = () => {
         customButtonGroup={<ButtonGroup />}
       >
         {mockData.map((item, idx) => (
-          <div className="d-flex justify-content-center" key={idx}>
+          <div className={styles.test} key={idx}>
             <ServiceCard data={item} />
           </div>
         ))}

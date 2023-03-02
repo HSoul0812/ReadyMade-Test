@@ -5,7 +5,7 @@ $yellow: #fed821;
 	padding-top: 80px;
 	position: relative;
 	width: 100%;
-	max-width: 376px;
+	max-width: 476px;
 	margin: 0 1.75%;
 	.avatar {
 		text-align: center;
@@ -120,9 +120,9 @@ $yellow: #fed821;
 .service {
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: 100% 100%;
 	padding: 21px 18px;
-	width: 311px;
+	width: 100%;
 	height: 376px;
 	color: $white;
 	line-height: 30px;
@@ -137,7 +137,7 @@ $yellow: #fed821;
 		font-weight: bold;
 	}
 	@media screen and (max-width: $xxl) {
-		width: 300px;
+		width: 100%;
 		height: 363px;
 		.title {
 			font-size: 14px;
@@ -149,7 +149,7 @@ $yellow: #fed821;
 }
 .category {
 	width: 100%;
-	max-width: 320px;
+	max-width: 360px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

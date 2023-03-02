@@ -216,7 +216,7 @@ const TopRate = () => {
         }}
         containerClass={cn(
           styles.container,
-          'col-lg-4 d-flex align-items-stretch justify-content-center',
+          'col-lg-4 d-flex align-items-stretch',
         )}
       />
     </div>
