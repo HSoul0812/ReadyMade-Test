@@ -534,6 +534,8 @@ $grey: #959595;
 				@media screen and (max-width: $md) {
 					.image {
 						width: 100%;
+						border-top-right-radius: 45px;
+						border-bottom-left-radius: 45px;
 					}
 					.card {
 						max-width: 170px;
