@@ -146,6 +146,9 @@ $yellow: #fed821;
 			font-size: 20px;
 		}
 	}
+	@media screen and (max-width: $md) {
+		max-width: 320px;
+	}
 }
 .category {
 	width: 100%;

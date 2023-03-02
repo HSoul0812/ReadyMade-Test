@@ -242,7 +242,7 @@ $grey: #959595;
 			}
 			@media screen and (max-width: $md) {
 				.title {
-					margin-left: 0;
+					margin: auto;
 				}
 				padding: 20px;
 			}
@@ -250,6 +250,8 @@ $grey: #959595;
 				margin-left: 15px;
 				margin-right: 15px;
 				@media screen and (max-width: $md) {
+					display: flex;
+					justify-content: center;
 					margin: 0;
 				}
 			}
